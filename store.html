@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Northwind Business Supplies – Store</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="topbar"><div class="wrapc">
+  <span>Free shipping on orders above ₹10,000</span>
+  <span>Support: 1800-123-4567 &nbsp;|&nbsp; procurement@northwind.com</span>
+</div></div>
+
+<header><div class="wrapc bar">
+  <div class="logo"><div class="mark">N</div><div>Northwind Business Supplies<small>Corporate procurement portal</small></div></div>
+  <div class="user"><div class="av" id="av"></div><div><b id="uname"></b><small id="urole"></small></div></div>
+  <button class="hbtn" id="orders">My orders</button>
+  <button class="hbtn" id="logout">Sign out</button>
+  <button class="hbtn primary" id="jump" aria-label="Go to cart">Cart<span id="count">0</span></button>
+</div></header>
+
+<div class="wrapc">
+  <section class="welcome">
+    <div>
+      <h1>Welcome back, <span id="wname"></span></h1>
+      <p>Order office and IT equipment for your team. Prices are in INR and exclusive of GST.</p>
+    </div>
+    <div class="stats">
+      <div><b id="sProducts">0</b><span>Products</span></div>
+      <div><b>5%</b><span>Bulk discount on 5+ items</span></div>
+      <div><b>18%</b><span>GST on invoice</span></div>
+    </div>
+  </section>
+</div>
+
+<main class="wrapc">
+  <section>
+    <div class="chips" id="chips"></div>
+    <div class="tools">
+      <input id="q" type="search" placeholder="Search by product name, brand or SKU" aria-label="Search products">
+      <select id="sort" aria-label="Sort products">
+        <option value="">Sort: Featured</option>
+        <option value="lh">Price: Low to high</option>
+        <option value="hl">Price: High to low</option>
+        <option value="rt">Rating: High to low</option>
+        <option value="az">Name: A to Z</option>
+      </select>
+    </div>
+    <div class="result" id="result"></div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <aside id="cart" aria-label="Shopping cart">
+    <h2>Your cart</h2>
+    <div class="items" id="items"></div>
+    <div class="sum">
+      <div class="coupon"><input id="code" placeholder="Coupon code" aria-label="Coupon code"><button id="apply">Apply</button></div>
+      <div class="msg" id="msg"></div>
+      <div id="totals"></div>
+      <button class="co" id="co">Place order</button>
+      <button class="clear" id="clear">Clear cart</button>
+      <div class="hint">Try SAVE10 (10% off) or CORP20 (20% off orders above ₹50,000).</div>
+    </div>
+  </aside>
+</main>
+
+<footer><div class="wrapc">© 2026 Northwind Business Supplies Pvt. Ltd. &nbsp;|&nbsp; GSTIN 33ABCDE1234F1Z5 &nbsp;|&nbsp; Chennai, Tamil Nadu</div></footer>
+
+<div class="modal" id="modal" hidden>
+  <div class="box"><button class="x noprint" id="mclose" aria-label="Close">×</button><div id="mbody"></div></div>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<script src="script.js"></script>
+</body>
+</html>
